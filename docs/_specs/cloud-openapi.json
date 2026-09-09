@@ -5,7 +5,7 @@
     "version": "1.0",
     "contact": {
       "name": "ClickHouse Support",
-      "url": "https://clickhouse.com/docs/en/cloud/manage/openapi?referrer=openapi-1107100",
+      "url": "https://clickhouse.com/docs/en/cloud/manage/openapi?referrer=openapi-1107552",
       "email": "support@clickhouse.com"
     }
   },
@@ -21547,7 +21547,8 @@
             "enum": [
               "JSONEachRow",
               "Avro",
-              "AvroConfluent"
+              "AvroConfluent",
+              "Protobuf"
             ]
           },
           "streamName": {
@@ -21610,7 +21611,8 @@
             "enum": [
               "JSONEachRow",
               "Avro",
-              "AvroConfluent"
+              "AvroConfluent",
+              "Protobuf"
             ]
           },
           "streamName": {
@@ -21672,6 +21674,14 @@
                 "type": "null"
               }
             ]
+          },
+          "protobufSchema": {
+            "description": "Base64-encoded .proto source or serialized FileDescriptorSet. Required with Protobuf format and not supported with other formats.",
+            "type": "string",
+            "example": "c3ludGF4ID0gInByb3RvMyI7IG1lc3NhZ2UgRXZlbnQge30=",
+            "maxLength": 1048576,
+            "minLength": 1,
+            "writeOnly": true
           }
         }
       },
